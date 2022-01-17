@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Poppins:wght@200;300;500&family=Quicksand:wght@400;700&display=swap');
+
+body {
+    background-color: #072227;
+    color: #AEFEFF;
+    overflow-x: hidden;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+a {
+    transition: all .3s;
+}
+
+a:hover {
+    box-shadow: rgba(79, 189, 186, 0.4) 0px 5px, rgba(79, 189, 186, 0.3) 0px 10px, rgba(79, 189, 186, 0.2) 0px 15px, rgba(79, 189, 186, 0.1) 0px 20px, rgba(79, 189, 186, 0.05) 0px 25px;
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: #4FBDBA;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
