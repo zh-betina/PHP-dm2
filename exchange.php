@@ -39,8 +39,9 @@ $result = "<p> $result </p>";
     <nav>
         <ul>
             <a href="./index.php"><li>Hungry?</li></a>
-            <a href="./form.php"><li>Wanna visit?</li></a>
+            <a href="./visitor.php"><li>Wanna visit?</li></a>
             <a href="./exchange.php"><li>Got some moneyz?</li></a>
+            <a href="./form.php"><li>Simple form</li></a>
         </ul>
     </nav>
     <main>

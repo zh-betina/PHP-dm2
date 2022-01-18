@@ -39,4 +39,82 @@ main {
     align-content: center;
     align-items: center;
     font-family: 'Poppins', sans-serif;
+    margin-top: 5rem;
+}
+
+button {
+    background-color: #35858B;
+    padding: .2rem .8rem;
+    color: #D3DEDC;
+    text-transform: uppercase;
+    font-size: 16px;
+    border-radius: 8px;
+    border-style: none;
+    cursor: pointer;
+    transition: background-color .3s;
+    height: 2rem;
+    margin: .2rem;
+}
+
+input {
+    border-radius: 8px;
+    height: 1.7rem;
+    border-style: none;
+}
+
+select {
+    border-radius: 8px;
+    border-style: none;
+}
+
+button:hover {
+    background-color: #086E7D;
+}
+
+.simple-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    border: dashed 1px #D3DEDC;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.simple-form fieldset {
+    border-style: none;
+}
+
+.simple-form__skills {
+    display: flex;
+    flex-direction: row;
+    max-width: 423px;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+}
+
+.simple-form__skills > div {
+    display: flex;
+    flex-direction: row;
+    column-gap: .3rem;
+}
+
+.simple-form__row {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+}
+
+.simple-form__row:nth-child(2) {
+    border-bottom: solid 1px #D3DEDC;
+    padding-bottom: 2rem;
+}
+
+.simple-form__label {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.simple-form__txt--h2 {
+    border-bottom: solid 1px #D3DEDC;
 }
