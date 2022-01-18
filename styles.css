@@ -71,6 +71,17 @@ button:hover {
     background-color: #086E7D;
 }
 
+.visitor-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.visitor-form > label {
+    display: flex;
+    flex-direction: column;
+}
+
 .simple-form {
     display: flex;
     flex-direction: column;
@@ -117,4 +128,32 @@ button:hover {
 
 .simple-form__txt--h2 {
     border-bottom: solid 1px #D3DEDC;
+}
+
+.err {
+    color: #FF008E;
+    font-weight: 500;
+    height: 51px;
+    display: inline-flex;
+    width: 281px;
+    border: 1px dashed #FF008E;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    text-transform: uppercase;
+}
+
+.success {
+    text-transform: uppercase;
+    color: #A3E4DB;
+    font-weight: 500;
+    height: 51px;
+    display: inline-flex;
+    width: 400px;
+    border: 1px dashed #A3E4DB;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
 }

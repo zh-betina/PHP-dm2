@@ -1,13 +1,5 @@
 <?php
-$weekMenu = array(
-    "monday" => array(),
-    "tuesday" => array(),
-    "wednesday" => array(),
-    "thursday" => array(),
-    "friday" => array(),
-    "saturday" => array(),
-    "sunday" => array()
-);
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +15,7 @@ $weekMenu = array(
 <body>
     <nav>
         <ul>
-            <a href="./index.php">
+            <a href="./index.php?">
                 <li>Hungry?</li>
             </a>
             <a href="./visitor.php">

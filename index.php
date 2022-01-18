@@ -1,4 +1,5 @@
 <?php
+session_start();
 $weekMenu = array(
     "monday" => array(),
     "tuesday" => array(),
