@@ -7,8 +7,10 @@ if (!isset($_SESSION['visitors'])) {
 
 if (count($_POST) > 0) {
     if ($_POST['pwd'] === $_POST['pwdRepeat']) {
-        $id = count($_SESSION['user']) + 1;
-        $_SESSION['uvisitors'][$id] = array();
+        $today = date("d/m/Y");
+        $id = count($_SESSION['visitors']) + 1;
+        $_SESSION['visitors'][$id] = array();
+        $_SESSION['visitors'][$id]['date'] = $today;
         foreach($_POST as $key => $val) {
             if ($key !== 'pwdRepeat') {
                 $_SESSION['visitors'][$id][$key] = $val;
