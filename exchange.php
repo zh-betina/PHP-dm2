@@ -7,21 +7,25 @@ $dollar = $_POST['amountDol'];
 
 $convert = new Money();
 
-if (!empty($euro) && empty($dollar)) {
-    $euro = floatval($euro);
-    $convert->setAmount($euro);
-    $result = $convert->euroToDollar() . " USD";
-} else if (!empty($dollar) && empty($euro)) {
-    $dollar = floatval($dollar);
-    $convert->setAmount($dollar);
-    $result = $convert->dollarToEuro() . " EUR";
-} else if (!empty($euro) && !empty($dollar)) {
-    $result =  'Only one currency field should be filled in';
+if (isset($_POST['amountEur']) || isset($_POST['amountDol'])) {
+    if (!empty($euro) && empty($dollar)) {
+        $euro = floatval($euro);
+        $convert->setAmount($euro);
+        $result = "<span class='success'>" . $convert->euroToDollar() . " USD" . "</span>";
+    } else if (!empty($dollar) && empty($euro)) {
+        $dollar = floatval($dollar);
+        $convert->setAmount($dollar);
+        $result = "<span class='success'>" . $convert->dollarToEuro() . " EUR" . "</span>";
+    } else if (!empty($euro) && !empty($dollar)) {
+        $result =  '<span class="err">Only one currency field should be filled in</span>';
+    } else {
+        $result =  '<span class="err">Please, fill in one of the fields</span>';
+    };
 } else {
-    $result =  'Please, fill in one of the fields';
-};
+    $result =  null;
+}
 
-$result = "<p> $result </p>";
+
 ?>
 
 <!DOCTYPE html>
@@ -46,16 +50,16 @@ $result = "<p> $result </p>";
     </nav>
     <main>
     <h1>Count yo moneyz</h1>
-    <form action="./exchange.php" method="post">
-        <label>
+    <?= isset($result) ? $result : null ?>
+    <form class="simple-form" action="./exchange.php" method="post">
+        <label class="simple-form__label">
             Your coinz in Euros:
             <input name="amountEur" type="number" min="0">
         </label>
-        <label>
+        <label class="simple-form__label">
             Your coinz in Dollars:
             <input name="amountDol" type="number" min="0">
         </label>
-        <span><?= isset($result) ? $result : null ?></span>
         <button type="submit">Convert</button>
     </form>
     </main>

@@ -71,6 +71,55 @@ button:hover {
     background-color: #086E7D;
 }
 
+table {
+    border: 1px dashed #086E7D;
+    padding: 1rem;
+}
+
+table thead tr,
+table tbody th {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+table tbody th {
+    height: 4rem;
+    border-top: 1px dashed #086E7D;
+    border-right: 1px dashed #086E7D;
+    color: #FEE3EC;
+}
+
+table tbody td {
+    height: 4rem;
+    padding: .4rem;
+    color: #C6FFC1;
+    border-top: 1px dashed #AAD8D3;
+    font-size: 13px;
+}
+
+table tbody td:not(td:last-child) {
+    border-right: 1px dashed #AAD8D3;
+}
+
+table thead tr td {
+    width: 4rem;
+    padding: 1.5rem;
+}
+
+table thead tr td:not(td:last-child) {
+    border-right: 1px dashed #086E7D;
+}
+
+select {
+    height: 2rem;
+}
+
+textarea {
+    border-radius: 8px;
+    border-style: none;
+    padding: .4rem;
+}
+
 .visitor-form {
     display: flex;
     flex-direction: column;
@@ -135,22 +184,22 @@ button:hover {
     font-weight: 500;
     height: 51px;
     display: inline-flex;
-    width: 281px;
     border: 1px dashed #FF008E;
     border-radius: 8px;
     justify-content: center;
     align-items: center;
     margin: 2rem;
     text-transform: uppercase;
+    padding: .4rem;
 }
 
 .success {
+    padding: .4rem;
     text-transform: uppercase;
     color: #A3E4DB;
     font-weight: 500;
     height: 51px;
     display: inline-flex;
-    width: 400px;
     border: 1px dashed #A3E4DB;
     border-radius: 8px;
     justify-content: center;
